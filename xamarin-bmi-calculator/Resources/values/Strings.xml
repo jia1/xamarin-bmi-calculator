@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">xamarin-bmi-calculator</string>
+    <string name="Title">BMI Calculator</string>
+    <string name="heightLabelText">Enter height (m)</string>
+    <string name="weightLabelText">Enter weight (kg)</string>
+    <string name="calcBtnText">Calculate BMI</string>
 </resources>

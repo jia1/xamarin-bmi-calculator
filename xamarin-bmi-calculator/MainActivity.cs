@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace xamarin_bmi_calculator
 {
-    [Activity(Label = "xamarin_bmi_calculator", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "@string/Title", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

@@ -110,11 +110,20 @@ namespace xamarin_bmi_calculator
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
-			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int ApplicationName = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int Title = 2130968577;
+			
+			// aapt resource value: 0x7f040004
+			public const int calcBtnText = 2130968580;
+			
+			// aapt resource value: 0x7f040002
+			public const int heightLabelText = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int weightLabelText = 2130968579;
 			
 			static String()
 			{

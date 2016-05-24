@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="xamarin_bmi_calculator.xamarin_bmi_calculator" android:versionCode="1" android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="xamarin_bmi_calculator.xamarin_bmi_calculator" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="19" />
-	<application android:label="xamarin_bmi_calculator"></application>
+	<application android:label="BMI Calculator" android:icon="@drawable/Icon"></application>
 </manifest>

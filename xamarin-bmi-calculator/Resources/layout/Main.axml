@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <TextView
-        android:text="Enter Height (m)"
+        android:text="@string/heightLabelText"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/heightInput" />
     <TextView
-        android:text="Enter Weight (kg)"
+        android:text="@string/weightLabelText"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/weightInput" />
     <Button
-        android:text="Calculate BMI"
+        android:text="@string/calcBtnText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/calcBtn" />

@@ -14,10 +14,15 @@ namespace Core
             }
             else
             {
-                height = double.Parse(h);
-                weight = double.Parse(w);
-                bmi = weight / Math.Pow(height, 2);
-                return bmi.ToString();
+                if (double.TryParse(h, out height) && double.TryParse(w, out weight))
+                {
+                    bmi = weight / Math.Pow(height, 2);
+                    return bmi.ToString();
+                }
+                else
+                {
+                    return "unavailable because you are naughty!";
+                }
             }
         }
     }

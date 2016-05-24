@@ -22,11 +22,29 @@ namespace xamarin_bmi_calculator
             EditText weightField = FindViewById<EditText>(Resource.Id.weightInput);
             Button calcBtn = FindViewById<Button>(Resource.Id.calcBtn);
             TextView bmiLabel = FindViewById<TextView>(Resource.Id.bmiOutput);
+            TextView bmiAdvice = FindViewById<TextView>(Resource.Id.bmiComment);
 
             calcBtn.Click += (object sender, EventArgs e) => 
             {
                 string bmiString = Core.BmiCalculator.Calculate(heightField.Text, weightField.Text);
-                bmiLabel.Text = "Your BMI is: " + bmiString;
+                bmiString = string.Format("{0:0.00}", bmiString);
+                bmiLabel.Text = "Your BMI is " + bmiString;
+                if (bmiString.Equals("unavailable because you are naughty!"))
+                {
+                    bmiAdvice.Text = "I have no advice for the mischievous!";
+                }
+                else
+                {
+                    double bmiNumber = double.Parse(bmiString);
+                    if (bmiNumber < 18.5)
+                        bmiAdvice.Text = "You are underweight! ):";
+                    else if (bmiNumber < 25.0)
+                        bmiAdvice.Text = "You are healthy! (:";
+                    else if (bmiNumber < 30)
+                        bmiAdvice.Text = "You are overweight! ):";
+                    else
+                        bmiAdvice.Text = "You are obese! ):";
+                }
             };
         }
     }

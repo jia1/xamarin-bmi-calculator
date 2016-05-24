@@ -10,7 +10,7 @@ namespace Core
             double height, weight, bmi;
             if (string.IsNullOrWhiteSpace(h) || string.IsNullOrWhiteSpace(w))
             {
-                return "Please fill in the blank(s)!";
+                return "unavailable because you are naughty!";
             }
             else
             {

@@ -5,4 +5,5 @@
     <string name="heightLabelText">Enter height (m)</string>
     <string name="weightLabelText">Enter weight (kg)</string>
     <string name="calcBtnText">Calculate BMI</string>
+    <string name="bmiHistText">Your BMI History</string>
 </resources>

@@ -5,12 +5,15 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Collections.Generic;
 
 namespace xamarin_bmi_calculator
 {
     [Activity(Label = "@string/Title", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
+        static readonly List<string> bmiHistory = new List<string>();
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -23,6 +26,7 @@ namespace xamarin_bmi_calculator
             Button calcBtn = FindViewById<Button>(Resource.Id.calcBtn);
             TextView bmiLabel = FindViewById<TextView>(Resource.Id.bmiOutput);
             TextView bmiAdvice = FindViewById<TextView>(Resource.Id.bmiComment);
+            Button bmiHistBtn = FindViewById<Button>(Resource.Id.bmiHistBtn);
 
             calcBtn.Click += (object sender, EventArgs e) => 
             {
@@ -44,7 +48,17 @@ namespace xamarin_bmi_calculator
                         bmiAdvice.Text = "You are overweight! ):";
                     else
                         bmiAdvice.Text = "You are obese! ):";
+
+                    bmiHistory.Add(bmiString);
+                    bmiHistBtn.Enabled = true;
                 }
+            };
+
+            bmiHistBtn.Click += (sender, e) => 
+            {
+                var intent = new Intent(this, typeof(BmiHistoryActivity));
+                intent.PutStringArrayListExtra("bmi_history", bmiHistory);
+                StartActivity(intent);
             };
         }
     }

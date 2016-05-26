@@ -60,11 +60,14 @@ namespace xamarin_bmi_calculator
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050006
-			public const int bmiComment = 2131034118;
+			// aapt resource value: 0x7f050007
+			public const int bmiComment = 2131034119;
 			
 			// aapt resource value: 0x7f050005
-			public const int bmiOutput = 2131034117;
+			public const int bmiHistBtn = 2131034117;
+			
+			// aapt resource value: 0x7f050006
+			public const int bmiOutput = 2131034118;
 			
 			// aapt resource value: 0x7f050004
 			public const int calcBtn = 2131034116;
@@ -115,6 +118,9 @@ namespace xamarin_bmi_calculator
 			
 			// aapt resource value: 0x7f040001
 			public const int Title = 2130968577;
+			
+			// aapt resource value: 0x7f040005
+			public const int bmiHistText = 2130968581;
 			
 			// aapt resource value: 0x7f040004
 			public const int calcBtnText = 2130968580;
